@@ -55,7 +55,7 @@ func TestUpdateAccount(t *testing.T) {
 		Balance: util.RandomMoney(),
 	}
 
-	err := testQueries.UpdateAccount(context.Background(), arg)
+	_, err := testQueries.UpdateAccount(context.Background(), arg)
 	require.NoError(t, err)
 
 	// Fetch the updated account from DB and verify the balance was changed
